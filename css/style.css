@@ -23,23 +23,23 @@ nav {
     z-index: 1000;
     top: 0;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     background-color: #000;
+    ;
 }
 
 .navbar {
     list-style: none;
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-around;
     align-items: center;
     box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.10);
-    background: transparent;
     transition: background-color 0.5s ease;
 }
 
 .navbar.scrolled {
-    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.342);
     z-index: 5;
 }
 
@@ -53,14 +53,37 @@ nav {
     font-size: 20px;
 }
 
-.header {
-    width: 100%;
-    height: 50rem;
+.navbar a:hover {
+    color: #B11313;
+    font-weight: bold;
 }
 
-.banner-video video {
+.header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    height: 55rem;
+    overflow: hidden;
+    padding: 1rem 0;
+    background: url(into_the_spiderverse.jpg) no-repeat center/cover;
+}
+
+.header::after {
+    content: '';
+    position: absolute;
+    bottom: -13px;
+    left: 0;
+    right: 0;
+    height: 20%;
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgb(0, 0, 0) 100%);
+}
+
+.banner-img img {}
+
+.video video {
     width: 100%;
     height: 50rem;
+
     background-size: cover;
     background-position: center;
 }
@@ -70,14 +93,14 @@ nav {
     max-width: 70%;
     overflow: hidden;
     position: relative;
-    margin: 2rem auto;
+    margin: 5rem auto;
     justify-content: center;
     align-items: center;
 }
 
 .story {
     position: relative;
-    background: url(spider02.jpg) repeat center/cover;
+    /* background: url(spider02.jpg) repeat center/cover; */
     height: 50rem;
     display: flex;
     justify-content: flex-end;
@@ -86,19 +109,26 @@ nav {
 
 .story-text {
     position: absolute;
-    text-align:start;
+    text-align: start;
     background: rgba(0, 0, 0, 0.5);
     max-width: 40rem;
     height: 100%;
     padding: 8rem 2rem;
 }
 
-.story-text h2{
+h2 {
+    text-transform: uppercase;
+    font-family: "Oswald", sans-serif;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.story-text h2 {
     font-size: 42px;
     padding: 2rem 0;
 }
 
-.story-text p{
+.story-text p {
     font-size: 16px;
     line-height: 1.7;
 }
@@ -109,6 +139,22 @@ nav {
 
 }
 
-.trailer iframe {
+.trailer-video iframe {
     padding: 2rem 0;
+}
+
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #B11313;
+}
+
+.foot-text {
+    color: #fff;
 }
